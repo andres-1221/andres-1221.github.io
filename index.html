@@ -114,33 +114,32 @@ para i en 10:
     z-index: 9999; /* Ensure game is on top of everything */
     display: none; /* Hidden by default */
   }
+
+  /* CSS styles for the hidden button */
+  #hiddenButton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 9999; /* Ensure button is on top of everything */
+    display: none; /* Hidden by default */
+  }
 </style>
 </head>
 <body>
-
-<section class="section">
-  <div class="container">
-    <h1>Serpiente</h1>
-    <p>Un lenguaje de programación elegante y fácil de aprender.</p>
-    
-    <h2>Ejemplos de Código</h2>
-    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 10px; overflow-x: auto; border: 1px solid black;">
-      <code class="language-python"># Ejemplo de código en Serpiente
-def saludar():
-    print("¡Hola, mundo!")
-
-saludar()</code>
-    </pre>
-    
-    <!-- Button for downloading language interpreter -->
-    <button id="downloadButton" onclick="downloadInterpreter()">Descargar Intérprete</button>
-  </div>
-</section>
 
 <!-- Snake game container -->
 <div id="snakeGameContainer">
   <!-- Snake game canvas will be dynamically added here -->
 </div>
+
+<!-- Hidden button to activate/deactivate the game -->
+<button id="hiddenButton" ondblclick="toggleSnakeGame()"></button>
 
 <!-- Your JavaScript code -->
 <script>
@@ -163,23 +162,16 @@ saludar()</code>
     window.location.href = googleDriveFileUrl;
   }
 
-  // Function to handle keypress event
-  document.addEventListener('keydown', function(event) {
-    var keyCode = event.keyCode || event.which;
-    var keyPressed = event.key || String.fromCharCode(keyCode);
+  // Function to toggle visibility of the snake game container
+  function toggleSnakeGame() {
+    var snakeGameContainer = document.getElementById('snakeGameContainer');
+    snakeGameContainer.style.display = snakeGameContainer.style.display === 'none' ? 'block' : 'none';
     
-    // Check if Shift + S + P combination is pressed
-    if (event.shiftKey && keyPressed.toLowerCase() === 's' && event.code === 'KeyP') {
-      // Toggle visibility of the snake game container
-      var snakeGameContainer = document.getElementById('snakeGameContainer');
-      snakeGameContainer.style.display = snakeGameContainer.style.display === 'none' ? 'block' : 'none';
-      
-      // Start the snake game if container is visible
-      if (snakeGameContainer.style.display === 'block') {
-        startSnakeGame();
-      }
+    // Start the snake game if container is visible
+    if (snakeGameContainer.style.display === 'block') {
+      startSnakeGame();
     }
-  });
+  }
 
   // Function to start the snake game
   function startSnakeGame() {
@@ -187,8 +179,35 @@ saludar()</code>
     // You can use a JavaScript game library like Phaser.js or write the game logic from scratch
     // Add the game canvas dynamically to the snakeGameContainer
   }
+
+  // Function to hide the hidden button
+  function hideHiddenButton() {
+    var hiddenButton = document.getElementById('hiddenButton');
+    hiddenButton.style.display = 'none';
+  }
+
+  // Function to show the hidden button
+  function showHiddenButton() {
+    var hiddenButton = document.getElementById('hiddenButton');
+    hiddenButton.style.display = 'block';
+  }
+
+  // Function to handle triple click on the hidden button
+  var clickCount = 0;
+  document.getElementById('hiddenButton').addEventListener('click', function() {
+    clickCount++;
+    if (clickCount === 3) {
+      clickCount = 0;
+      toggleSnakeGame();
+    }
+    // Reset click count after 1 second
+    setTimeout(function() {
+      clickCount = 0;
+    }, 1000);
+  });
 </script>
 
 </body>
 </html>
+
 
