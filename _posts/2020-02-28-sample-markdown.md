@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Sample blog post to learn markdown tips
-subtitle: There's lots to learn!
+title: What is Serpiente?
+#subtitle: There's lots to learn!
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
-comments: true
+comments: false
 mathjax: true
-author: Bill Smith
+#author: 
 ---
 
 {: .box-success}
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/tables/etc.<br/>I also encourage you to look at the [code that created this post](https://raw.githubusercontent.com/daattali/beautiful-jekyll/master/_posts/2020-02-28-sample-markdown.md) to learn some more advanced tips about using markdown in Beautiful Jekyll.
+Serpiente is a programming language inspired by Python, designed with the goal of making coding more accessible to Spanish-speaking programmers and beginners. The name "Serpiente," which means "snake" in Spanish, is similar to Python's language design and syntax. Serpiente aims to lower the barrier to entry for Spanish speakers entering the world of programming. With its easy-to-read code structure, Serpiente provides a welcoming environment for newcomers to learn and explore the fundamentals of coding while empowering Spanish-speaking developers to express their ideas and solutions effectively.
 
 **Here is some bold text**
 
