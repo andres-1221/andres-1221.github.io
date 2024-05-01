@@ -49,7 +49,7 @@ para i en 10:
 </section>
 
 <!-- Button for downloading language interpreter -->
-    <button id="downloadButton" onclick="downloadInterpreter()">Descargar Intérprete</button>
+    <button id="downloadButton" onclick="downloadInterpreter()">Descargar Serpiente</button>
   </div>
 </section>
 
@@ -57,12 +57,40 @@ para i en 10:
   // Function to handle color change and initiate download
   function downloadInterpreter() {
     var button = document.getElementById("downloadButton");
+    var colors = ['#ff0000', '#00ff00', '#0000ff']; // List of colors to cycle through
+    var i = 0; // Initial index for color array
     
-    // Change button color
-    button.style.backgroundColor = "#4CAF50"; // Change to desired color
+    // Change button color continuously
+    setInterval(function() {
+      button.style.backgroundColor = colors[i];
+      i = (i + 1) % colors.length; // Cycle through colors
+    }, 1000); // Change color every 1000 milliseconds (1 second)
     
     // Initiate download action
     // Replace 'interpreter_file_url' with the actual URL of the interpreter file
     window.location.href = "https://github.com/andres-1221/serpiente/blob/23be37043f5d1e3417eaba13bee2df6c655b748c/serpiente_interpreter.ser";
   }
 </script>
+
+<style>
+  /* Center the button horizontally */
+  #downloadButton {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #333; /* Button border */
+    background-color: #ccc; /* Initial button color */
+    color: #333; /* Button text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+    box-shadow: 0px 5px 0px 0px #666; /* 3D effect shadow */
+  }
+  
+  /* Button hover effect */
+  #downloadButton:hover {
+    background-color: #aaa; /* Change button color on hover */
+    box-shadow: 0px 3px 0px 0px #666; /* Adjust shadow on hover */
+  }
+</style>
