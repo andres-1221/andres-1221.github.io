@@ -2,9 +2,9 @@
 layout: post
 title: What is Serpiente?
 #subtitle: There's lots to learn!
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [test]
+#gh-repo: daattali/beautiful-jekyll
+#gh-badge: [star, fork, follow]
+#tags: [test]
 comments: false
 mathjax: true
 #author: 
@@ -12,32 +12,6 @@ mathjax: true
 
 {: .box-success}
 Serpiente is a programming language inspired by Python, designed with the goal of making coding more accessible to Spanish-speaking programmers and beginners. The name "Serpiente," which means "snake" in Spanish, is similar to Python's language design and syntax. Serpiente aims to lower the barrier to entry for Spanish speakers entering the world of programming. With its easy-to-read code structure, Serpiente provides a welcoming environment for newcomers to learn and explore the fundamentals of coding while empowering Spanish-speaking developers to express their ideas and solutions effectively.
-
-**Here is some bold text**
-
-## Here is a secondary heading
-
-[This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
-
-Here's a table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-You can use [MathJax](https://www.mathjax.org/) to write LaTeX expressions. For example:
-When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-How about a yummy crepe?
-
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
-
-It can also be centered!
-
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg){: .mx-auto.d-block :}
 
 Here's a code chunk:
 
@@ -88,8 +62,8 @@ You can add notification, warning and error boxes like this:
 
 When hosting a *project site* on GitHub Pages (for example, `https://USERNAME.github.io/MyProject`), URLs that begin with `/` and refer to local files may not work correctly due to how the root URL (`/`) is interpreted by GitHub Pages. You can read more about it [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). To demonstrate the issue, the following local image will be broken **if your site is a project site:**
 
-![Crepe](/assets/img/crepe.jpg)
+#![Crepe](/assets/img/crepe.jpg)
 
 If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
 
-![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
+#![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
