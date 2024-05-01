@@ -47,3 +47,22 @@ para i en 10:
     <!-- Add more code examples as needed -->
   </div>
 </section>
+
+<!-- Button for downloading language interpreter -->
+    <button id="downloadButton" onclick="downloadInterpreter()">Descargar Intérprete</button>
+  </div>
+</section>
+
+<script>
+  // Function to handle color change and initiate download
+  function downloadInterpreter() {
+    var button = document.getElementById("downloadButton");
+    
+    // Change button color
+    button.style.backgroundColor = "#4CAF50"; // Change to desired color
+    
+    // Initiate download action
+    // Replace 'interpreter_file_url' with the actual URL of the interpreter file
+    window.location.href = "https://github.com/andres-1221/serpiente/blob/23be37043f5d1e3417eaba13bee2df6c655b748c/serpiente_interpreter.ser";
+  }
+</script>
