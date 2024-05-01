@@ -10,4 +10,19 @@ footer.footer-min {
   background-color: #f5f5f5;
   border-top: 1px solid #eeeeee;
   text-align: center;
+
+  /* Custom styles for code blocks */
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+  
 }
